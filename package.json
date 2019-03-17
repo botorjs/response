@@ -1,0 +1,57 @@
+{
+  "name": "@botorjs/response",
+  "version": "0.0.1",
+  "description": "Library that of Botorjs is response of  http context ",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" mocha -r ts-node/register tests/**/*.test.ts && nyc report",
+    "coverage-ci": "nyc -r lcov -e .ts -x \"*.test.ts\" mocha -r ts-node/register tests/**/*.test.ts && nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botorjs/response.git"
+  },
+  "keywords": [
+    "response",
+    "http",
+    "botor",
+    "bottors",
+    "node",
+    "typescript"
+  ],
+  "author": "norton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/botorjs/response/issues"
+  },
+  "homepage": "https://github.com/botorjs/response#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/debug": "^4.1.2",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.11.3",
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "debug": "^4.1.1",
+    "fs-extra": "^7.0.1",
+    "japa": "^2.0.7",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "content-disposition": "^0.5.3",
+    "destroy": "^1.0.4",
+    "etag": "^1.8.1",
+    "fresh": "^0.5.2",
+    "macroable": "^2.0.1",
+    "mime-types": "^2.1.22",
+    "on-finished": "^2.3.0",
+    "vary": "^1.1.2"
+  }
+}
